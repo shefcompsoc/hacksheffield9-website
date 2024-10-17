@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "MADETommy Soft Bold";
+    src: url('/fonts/MADE Tommy Soft Bold.otf') format('opentype');
+}
+
+html {
+    background-color: #7A8B99;
+}
+
+h1 {
+    font-family: "MADETommy Soft Bold";
+}

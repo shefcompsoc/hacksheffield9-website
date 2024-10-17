@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "MADETommy Soft Regular";
+    src: url('/fonts/MADE Tommy Soft Regular.otf') format('opentype');
+}
+
+a {
+    font-family: "MADETommy Soft Regular";
+    text-decoration: none;
+    color: #fff;
+    background-color: #363636;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+}
