@@ -1,0 +1,48 @@
+<div class="countdown-container">
+    <div class="countdown-timer" id="countdown">
+        <div class="time-unit">
+            <span id="days">0</span>
+            <div class="label">Days</div>
+        </div>
+        <div class="time-unit">
+            <span id="hours">0</span>
+            <div class="label">Hours</div>
+        </div>
+        <div class="time-unit">
+            <span id="minutes">0</span>
+            <div class="label">Minutes</div>
+        </div>
+        <div class="time-unit">
+            <span id="seconds">0</span>
+            <div class="label">Seconds</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const targetDate = new Date(Date.parse("2024-11-16T09:00:00.000+00:00")).getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const timeRemaining = targetDate - now;
+
+        if (timeRemaining < 0) {
+            clearInterval(timerInterval);
+            document.getElementById("countdown")!.innerHTML = "Time's up!";
+            return;
+        }
+
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        document.getElementById("days")!.textContent = days.toString();
+        document.getElementById("hours")!.textContent = hours.toString();
+        document.getElementById("minutes")!.textContent = minutes.toString();
+        document.getElementById("seconds")!.textContent = seconds.toString();
+    }
+
+    const timerInterval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+</script>
