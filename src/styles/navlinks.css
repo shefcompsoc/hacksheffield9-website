@@ -11,3 +11,14 @@
     padding: 0.5rem 1rem;
     border-radius: 1rem;
 }
+
+.navlinks {
+    display: none;
+}
+
+@media screen and (min-width: 500px) {
+    .navlinks {
+        margin-right: 10rem;
+        display: block;
+    }
+}
