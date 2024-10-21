@@ -3,7 +3,7 @@
     src: url('/fonts/MADE Tommy Soft Regular.otf') format('opentype');
 }
 
-a {
+.navlink {
     font-family: "MADETommy Soft Regular";
     text-decoration: none;
     color: #fff;
