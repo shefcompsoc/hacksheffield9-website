@@ -1,0 +1,18 @@
+.countdown-timer {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    grid-template-columns: min-content min-content;
+}
+
+.countdown-timer .number {
+    font-size: 5em;
+    font-family: 'DSEG7-Classic';
+    font-weight: bold;
+}
+
+.countdown-timer .label {
+    font-size: 1em;
+    writing-mode: vertical-lr;
+    text-align: center;
+    font-family: 'DSEG14-Classic';
+}
