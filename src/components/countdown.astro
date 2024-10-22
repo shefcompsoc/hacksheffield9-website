@@ -2,26 +2,25 @@
 import "../styles/countdown.css";
 import "dseg/css/dseg.css"
 ---
+<div class="countdown-timer">
+    <span class="countdown-block">
+        <span class="number" id="days">0</span>
+        <span class="label">days</span>
+    </span>
+    <span class="countdown-block">
+        <span class="number" id="hours">0</span>
+        <span class="label">hours</span>
+    </span>
+    <span class="countdown-block">
+        <span class="number" id="minutes">0</span>
+        <span class="label">minutes</span>
+    </span>
+    <span class="countdown-block">
+        <span class="number" id="seconds">0</span>
+        <span class="label">seconds</span>
+    </span>
+</div>
 
-    
-    <div class="countdown-timer">
-        <span>
-            <span class="number" id="days">0</span>
-            <span class="label">days</span>
-        </span>
-        <span>
-            <span class="number" id="hours">0</span>
-            <span class="label">hours</span>
-        </span>
-        <span>
-            <span class="number" id="minutes">0</span>
-            <span class="label">minutes</span>
-        </span>
-        <span>
-            <span class="number" id="seconds">0</span>
-            <span class="label">seconds</span>
-        </span>
-    </div>
 
 <script>
     const targetDate = new Date(Date.parse("2024-11-16T09:00:00.000+00:00")).getTime();

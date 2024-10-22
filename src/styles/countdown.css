@@ -2,6 +2,8 @@
     display: grid;
     grid-template-rows: min-content min-content;
     grid-template-columns: min-content min-content;
+    width: 100%;
+    justify-content: center;
 }
 
 .countdown-timer .number {
@@ -15,4 +17,8 @@
     writing-mode: vertical-lr;
     text-align: center;
     font-family: 'DSEG14-Classic';
+}
+
+.countdown-timer .countdown-block {
+    display: flex;
 }
