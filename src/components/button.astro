@@ -1,8 +1,10 @@
 ---
 import '../styles/button.css';
+
+const link = Astro.props.link;
+const text = Astro.props.text;
 ---
 
-<form action="https://ti.to/sheffield-compsoc/hacksheffield-9" target="_blank"
-    class="button">
-    <button type="submit">Get your tickets!</button>
+<form action={link} target="_blank" class="button">
+    <button type="submit">{text}</button>
 </form>
