@@ -16,7 +16,7 @@
     display: none;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 900px) {
     .navlinks {
         margin-right: 10rem;
         display: block;
