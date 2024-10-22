@@ -1,0 +1,32 @@
+<div>
+    <h2>Frequently Asked Questions</h2>
+    <div>
+        <script>
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling as HTMLElement;
+                    answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+                });
+            });
+        </script>
+
+        <style>
+            .faq-answer {
+                display: none;
+            }
+        </style>
+
+        <div class="faq-item">
+            <div class="faq-question">Should I attend hackSheffield?</div>
+            <div class="faq-answer">YES! please :)</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">yap</div>
+            <div class="faq-answer">answering yap</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">testing yay</div>
+            <div class="faq-answer">at some point i'm gonna have to put some real answers here<div>
+        </div>
+    </div>
+</div>
