@@ -1,0 +1,35 @@
+footer {
+    background-color: #363636;
+    width: calc(100% - 4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 2rem;
+    margin: 2rem 0 0 0;
+}
+
+#socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 0.5rem;
+    color: #fffbfc;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    color: #fffbfc;
+}
+
+footer a {
+    color: #6499e3;
+}
+
+footer a:visited {
+    color: #DFC2F2;
+}

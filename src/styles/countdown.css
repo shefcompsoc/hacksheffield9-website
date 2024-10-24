@@ -1,0 +1,37 @@
+.countdown-timer {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    grid-template-columns: min-content min-content;
+    width: 100%;
+    justify-content: center;
+}
+
+.countdown-timer .number {
+    font-size: 5em;
+    font-family: 'DSEG7-Classic';
+    font-weight: bold;
+    margin: 0;
+}
+
+.countdown-timer .number p {
+    font-family: 'DSEG7-Classic';
+}
+
+.countdown-timer .label p {
+    font-family: 'DSEG14-Classic';
+}
+
+.countdown-timer .label {
+    font-size: 1em;
+    writing-mode: vertical-lr;
+    text-align: center;
+    font-family: 'DSEG14-Classic';
+}
+
+.countdown-timer .countdown-block {
+    display: flex;
+}
+
+p {
+    margin: auto;
+}

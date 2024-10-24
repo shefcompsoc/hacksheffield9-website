@@ -1,0 +1,52 @@
+---
+import "../styles/countdown.css";
+import "dseg/css/dseg.css"
+---
+<div class="countdown-timer">
+    <span class="countdown-block">
+        <span class="number"><p id="days">0</p></span>
+        <span class="label"><p>days</p></span>
+    </span>
+    <span class="countdown-block">
+        <span class="number"><p id="hours">0</p></span>
+        <span class="label"><p>hours</p></span>
+    </span>
+    <span class="countdown-block">
+        <span class="number"><p id="minutes">0</p></span>
+        <span class="label"><p>minutes</p></span>
+    </span>
+    <span class="countdown-block">
+        <span class="number"><p id="seconds">0</p></span>
+        <span class="label"><p>seconds</p></span>
+    </span>
+</div>
+<h2>Until the hacking begins!</h2>
+
+
+<script>
+    const targetDate = new Date(Date.parse("2024-11-16T09:00:00.000+00:00")).getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const timeRemaining = targetDate - now;
+
+        if (timeRemaining < 0) {
+            clearInterval(timerInterval);
+            document.getElementById("countdown")!.innerHTML = "Time's up!";
+            return;
+        }
+
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        document.getElementById("days")!.textContent = days.toString().padStart(2, '0');
+        document.getElementById("hours")!.textContent = hours.toString().padStart(2, '0');
+        document.getElementById("minutes")!.textContent = minutes.toString().padStart(2, '0');
+        document.getElementById("seconds")!.textContent = seconds.toString().padStart(2, '0');
+    }
+
+    const timerInterval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+</script>

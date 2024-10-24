@@ -1,0 +1,25 @@
+---
+export const prerender = true; // Ensures the page is generated as static HTML.
+const targetUrl = "https://discord.gg/HMqFbQ2K6b"; // Replace with the URL you want to redirect to.
+---
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="refresh" content="0;url={targetUrl}" />
+        <title>Redirecting...</title>
+        <link rel="canonical" href="https://discord.gg/HMqFbQ2K6b" />
+        <script>
+        setTimeout(() => {
+            window.location.href = "https://discord.gg/HMqFbQ2K6b";
+        }, 0);
+        </script>
+    </head>
+    <body>
+        <p>
+        If you are not redirected automatically, <a href="https://discord.gg/HMqFbQ2K6b"
+            >click here</a>.
+        </p>
+    </body>
+</html>

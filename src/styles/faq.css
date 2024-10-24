@@ -1,0 +1,38 @@
+#faqs-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#faqs {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.faq-item {
+    width: calc(100% - 2.5rem);
+    padding: 1rem;
+    margin: 0.5rem;
+    border: 0.25rem solid #666666;
+    border-radius: 1rem;
+}
+
+#faqs summary {
+    margin-bottom: 0.25rem;
+    color: black;
+    font-weight: bold;
+    list-style: none;
+    cursor: pointer;
+}
+
+#faqs summary:hover {
+    text-decoration: underline;
+}
+
+#faqs details>p {
+    color: black;
+}
