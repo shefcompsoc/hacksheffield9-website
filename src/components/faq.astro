@@ -5,15 +5,6 @@ import "../styles/faq.css";
 <div id="faqs-container">
     <h2>Frequently Asked Questions</h2>
     <div id="faqs">
-        <script>
-            document.querySelectorAll('.faq-question').forEach(question => {
-                question.addEventListener('click', () => {
-                    const answer = question.nextElementSibling as HTMLElement;
-                    answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
-                });
-            });
-        </script>
-
         <details class="faq-item">
             <summary>Should I attend hackSheffield?</summary>
             <p>YES! please :) If you've ever thought about attending a hackathon, HackSheffield is a great place to start.</p>
