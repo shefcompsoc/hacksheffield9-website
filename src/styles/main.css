@@ -41,6 +41,7 @@ h1, h2, h3, p {
 .blurb {
     margin-left: 1rem;
     margin-right: 1rem;
+    text-align: center;
 }
 
 h1 {
