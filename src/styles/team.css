@@ -3,13 +3,7 @@
     src: url('/fonts/MADE Tommy Soft Bold.otf') format('opentype');
 }
 
-.team-heading {
-    font-family: "MADETommy Soft Bold";
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 1rem 0;
-    color: #000;
-}
+
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));

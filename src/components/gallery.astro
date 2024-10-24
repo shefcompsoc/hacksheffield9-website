@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets';
+const imageFiles = await Astro.glob("../img/gallery/*");
+---
+
+<style>
+  .gallery-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+    white-space: nowrap;
+  }
+
+  .gallery-container::-webkit-scrollbar {
+    height: 8px; /* Adjust the height of the scrollbar */
+  }
+
+  .gallery-container::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded corners for the scrollbar thumb */
+  }
+
+  .gallery-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color of the scrollbar thumb on hover */
+  }
+
+  .gallery-container img {
+    flex-shrink: 0;
+    height: 300px; /* Set a fixed height */
+    width: auto; /* Allow width to adjust */
+    border-radius: 8px;
+    object-fit: contain; /* Ensure the aspect ratio is maintained */
+  }
+
+  @media (max-width: 800px) {
+    .gallery-container img {
+      height: 200px; /* Adjust height for smaller screens */
+    }
+  }
+</style>
+<h2>Gallery</h2>
+<div class="gallery-container">
+  {
+    imageFiles.map((img) => (
+      <Image
+        src={img.default}
+        alt="Photo of a pizza"
+        class="gallery-image"
+      />
+    ))
+  }
+</div>
