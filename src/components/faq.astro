@@ -1,32 +1,23 @@
-<div>
+---
+import "../styles/faq.css";
+---
+
+<div id="faqs-container">
     <h2>Frequently Asked Questions</h2>
-    <div>
-        <script>
-            document.querySelectorAll('.faq-question').forEach(question => {
-                question.addEventListener('click', () => {
-                    const answer = question.nextElementSibling as HTMLElement;
-                    answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
-                });
-            });
-        </script>
+    <div id="faqs">
+        <details class="faq-item">
+            <summary>Should I attend hackSheffield?</summary>
+            <p>YES! please :) If you've ever thought about attending a hackathon, HackSheffield is a great place to start.</p>
+        </details>
 
-        <style>
-            .faq-answer {
-                display: none;
-            }
-        </style>
+        <details class="faq-item">
+            <summary>When and where will hackSheffield be?</summary>
+            <p>HackSheffield 9 will be at 38 Mappin St., Sheffield, England.</p>
+        </details>
 
-        <div class="faq-item">
-            <div class="faq-question">Should I attend hackSheffield?</div>
-            <div class="faq-answer">YES! please :)</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">yap</div>
-            <div class="faq-answer">answering yap</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">testing yay</div>
-            <div class="faq-answer">at some point i'm gonna have to put some real answers here<div>
-        </div>
+        <details class="faq-item">
+            <summary>How large can my team be?</summary>
+            <p>HackSheffield will allow a maximum of 4 people per team.</p>
+        </details>
     </div>
 </div>

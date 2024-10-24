@@ -1,9 +1,12 @@
 ---
+import '../styles/main.css';
 import Header from '../components/header.astro';
 import Introduction from '../components/introduction.astro';
-import Button from '../components/button.astro';
 import FAQ from '../components/faq.astro';
 import Team from '../components/team.astro';
+import Schedule from '../components/schedule.astro';
+import Sponsors from '../components/sponsors.astro';
+import Footer from '../components/footer.astro';
 import '../styles/main.css';
 ---
 
@@ -16,15 +19,16 @@ import '../styles/main.css';
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
-        <Header />
-        <Introduction />
-        <Button link="https://ti.to/sheffield-compsoc/hacksheffield-9" text="Get your tickets!"/>
-        <FAQ />
-        <!-- SCHEDULE -->
-        <!-- SPONSORS -->
-        <Team />
-        <!-- GALLERY -->
-        <!-- FOOTER -->
+        <div id="page-container">        
+            <Header />
+            <Introduction />
+            <FAQ />
+            <Schedule />
+            <Sponsors />
+            <Team />
+            <!-- GALLERY -->
+        </div>
+        <Footer />
         <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/eu?utm_source=eu-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg" alt="Major League Hacking 2025 Hackathon Season" style="width:100%"></a>
     </body> 
 </html>
