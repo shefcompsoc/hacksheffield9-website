@@ -6,21 +6,25 @@ import { Image } from 'astro:assets';
 ---
 
 
-<div>
-    <h2>Sponsors</h2>
-    <p>hackSheffield 9 would not be possible without the generous support of our sponsors. We are grateful for their contributions and are excited to have them on board!</p>
-    <!--<div class="sponsor-container">
-        <h1>Platinum</h1>
-    </div>
-    <div class="sponsor-container">
-        <h2>Gold</h2>
-    </div>
-    <div class="sponsor-container">
-        <h2>Silver</h2>
-    </div> -->
-    <div class="sponsor-container">
-        <h3>Bronze</h3>
-        <Image src={BlackRockLogo} alt="Aladdin by BlackRock Logo" class="sponsor-logo"/>
-        <Image src={CapitalOneLogo} alt="CapitalOne Logo" class="sponsor-logo"/>
+<div id="sponsors-section-container">
+    <div id="sponsors-section">
+        <h2>Sponsors</h2>
+        <p>hackSheffield 9 would not be possible without the generous support of our sponsors. We are grateful for their contributions and are excited to have them on board!</p>
+        <!--<div class="sponsor-container">
+            <h1>Platinum</h1>
+        </div>
+        <div class="sponsor-container">
+            <h2>Gold</h2>
+        </div>
+        <div class="sponsor-container">
+            <h2>Silver</h2>
+        </div> -->
+        <div class="sponsor-container">
+            <h3>Bronze</h3>
+            <div class="sponsor-logo-container">
+                <Image src={BlackRockLogo} alt="Aladdin by BlackRock Logo" class="sponsor-logo"/>
+                <Image src={CapitalOneLogo} alt="CapitalOne Logo" class="sponsor-logo"/>
+            </div>
+        </div>
     </div>
 </div>
