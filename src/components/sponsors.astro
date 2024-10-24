@@ -2,6 +2,11 @@
 import "../styles/sponsors.css";
 import BlackRockLogo from '../img/Aladdin_BlackRock_logo_01.webp';
 import CapitalOneLogo from '../img/Capital_One_logo.webp';
+import MLHLogo from '../img/mlh-logo-color.png';
+import HackUKLogo from '../img/hackuklogo.webp';
+import SchoolOfCSLogo from '../img/school-of-cs-logo.png';
+import CompSocLogoDark from '../img/compsoc_logo_with_dark_text.png';
+import GitHubLogo from '../img/GitHub_Logo.png';
 import { Image } from 'astro:assets';
 ---
 
@@ -9,7 +14,7 @@ import { Image } from 'astro:assets';
 <div id="sponsors-section-container">
     <div id="sponsors-section">
         <h2>Sponsors</h2>
-        <p>hackSheffield 9 would not be possible without the generous support of our sponsors. We are grateful for their contributions and are excited to have them on board!</p>
+        <p>hackSheffield 9 would not be possible without the generous support of our sponsors and partners. We are grateful for their contributions and are excited to have them on board!</p>
         <!--<div class="sponsor-container">
             <h1>Platinum</h1>
         </div>
@@ -28,7 +33,27 @@ import { Image } from 'astro:assets';
                 <a href="https://www.capitalone.co.uk/" target="_blank">
                     <Image src={CapitalOneLogo} alt="CapitalOne Logo" class="sponsor-logo"/>
                 </a>
+                <a href="https://gh.io/hacksheffield24" target="_blank">
+                    <Image src={GitHubLogo} alt="GitHub Logo" class="sponsor-logo"/>
+                </a>
             </div>
         </div>
+        <h2>Partners</h2>
+        <div class="sponsor-container">
+            <div class="sponsor-logo-container">
+                <a href="https://mlh.io/" target="_blank">
+                    <Image src={MLHLogo} alt="MLH Logo" class="sponsor-logo"/>
+                </a>
+                <a href="https://hackathons.org.uk/" target="_blank">
+                    <Image src={HackUKLogo} alt="HackathonsUK Logo" class="sponsor-logo"/>
+                </a>
+                <a href="https://www.sheffield.ac.uk/cs" target="_blank">
+                    <Image src={SchoolOfCSLogo} alt="School of Computer Science Logo" class="sponsor-logo"/>
+                </a>
+                <a href="https://shefcompsoc.uk/" target="_blank">
+                    <Image src={CompSocLogoDark} alt="CompSoc Logo" class="sponsor-logo"/>
+                </a>
+            </div>
+        </div>       
     </div>
 </div>
