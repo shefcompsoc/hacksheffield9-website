@@ -48,7 +48,13 @@ h2 {
     margin: 0.5rem 0;
 }
 
-p, summary {
+h3 {
+    font-family: "MADETommy Soft Bold";
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+p, summary, td {
     font-family: "MADETommy Soft Regular";
 }
 
