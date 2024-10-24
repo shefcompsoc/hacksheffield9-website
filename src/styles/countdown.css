@@ -13,6 +13,14 @@
     margin: 0;
 }
 
+.countdown-timer .number p {
+    font-family: 'DSEG7-Classic';
+}
+
+.countdown-timer .label p {
+    font-family: 'DSEG14-Classic';
+}
+
 .countdown-timer .label {
     font-size: 1em;
     writing-mode: vertical-lr;

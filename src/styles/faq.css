@@ -1,0 +1,24 @@
+.faq-answer {
+    display: none;
+}
+
+#faqs-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#faqs {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.faq-question {
+    margin: 0.5rem 0;
+    cursor: pointer;
+    font-weight: bold;
+}

@@ -11,11 +11,26 @@ h1, h2, h3, p {
     color: #363636;
 }
 
+#title-container {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 1200px;
+}
+
+#blurb {
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 h1 {
@@ -31,6 +46,10 @@ h2 {
     /*color: #363636;*/
     justify-content: center;
     margin: 0.5rem 0;
+}
+
+p {
+    font-family: "MADETommy Soft Regular";
 }
 
 @media screen and (min-width: 500px) {

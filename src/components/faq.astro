@@ -1,6 +1,10 @@
-<div>
+---
+import "../styles/faq.css";
+---
+
+<div id="faqs-container">
     <h2>Frequently Asked Questions</h2>
-    <div>
+    <div id="faqs">
         <script>
             document.querySelectorAll('.faq-question').forEach(question => {
                 question.addEventListener('click', () => {
@@ -10,14 +14,8 @@
             });
         </script>
 
-        <style>
-            .faq-answer {
-                display: none;
-            }
-        </style>
-
         <div class="faq-item">
-            <p class="faq-question"><p>Should I attend hackSheffield?</p></div>
+            <div class="faq-question"><p>Should I attend hackSheffield?</p></div>
             <div class="faq-answer"><p>YES! please :) If you've ever thought about attending a hackathon, HackSheffield is a great place to start.</p></div>
         </div>
         <div class="faq-item">
