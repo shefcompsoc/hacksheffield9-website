@@ -5,6 +5,10 @@
     align-items: center;
 }
 
+h1 {
+    text-align: center;
+}
+
 #faqs {
     width: 100%;
     max-width: 800px;
