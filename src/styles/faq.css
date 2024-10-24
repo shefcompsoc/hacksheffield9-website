@@ -5,6 +5,10 @@
     align-items: center;
 }
 
+h1 {
+    text-align: center;
+}
+
 #faqs {
     width: 100%;
     max-width: 800px;
@@ -14,7 +18,7 @@
 }
 
 .faq-item {
-    width: calc(100% - 2.5rem);
+    width: calc(100% - 3.5rem);
     padding: 1rem;
     margin: 0.5rem;
     border: 0.25rem solid #666666;
