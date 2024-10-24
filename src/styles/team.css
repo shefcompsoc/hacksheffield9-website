@@ -9,30 +9,36 @@ html {
 
 h1 {
     font-family: "MADETommy Soft Bold";
-    font-size: 2.5rem;
+    font-size: 2rem;
     justify-content: center;
     margin: 0.5rem 0;
 }
 
 h2 {
     font-family: "MADETommy Soft Bold";
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     justify-content: center;
     margin: 0.5rem 0;
 }
 
 @media screen and (min-width: 500px) {
     h1 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
     h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
-
+.team-heading {
+    font-family: "MADETommy Soft Bold";
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem 0;
+    color: #000;
+}
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
     gap: 20px;
     padding: 20px;
 }
@@ -56,12 +62,13 @@ h2 {
 }
 .team-member-name {
     margin: 10px 0 5px;
-    font-size: 1.2em;
+    font-size: 1em;
     color: #333;
     font-family: "MADETommy Soft Bold";
 }
 .team-member-role {
     color: #666;
     margin-bottom: 10px;
+    font-size: 0.9em;
     font-family: "MADETommy Soft Bold";
 }
