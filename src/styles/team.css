@@ -3,28 +3,6 @@
     src: url('/fonts/MADE Tommy Soft Bold.otf') format('opentype');
 }
 
-h1 {
-    font-family: "MADETommy Soft Bold";
-    font-size: 2rem;
-    justify-content: center;
-    margin: 0.5rem 0;
-}
-
-h2 {
-    font-family: "MADETommy Soft Bold";
-    font-size: 1.2rem;
-    justify-content: center;
-    margin: 0.5rem 0;
-}
-
-@media screen and (min-width: 500px) {
-    h1 {
-        font-size: 3rem;
-    }
-    h2 {
-        font-size: 1.5rem;
-    }
-}
 .team-heading {
     font-family: "MADETommy Soft Bold";
     font-size: 2.5rem;
