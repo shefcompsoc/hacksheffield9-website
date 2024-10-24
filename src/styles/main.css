@@ -48,7 +48,7 @@ h2 {
     margin: 0.5rem 0;
 }
 
-p {
+p, summary {
     font-family: "MADETommy Soft Regular";
 }
 
