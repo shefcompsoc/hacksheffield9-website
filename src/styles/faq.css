@@ -18,7 +18,7 @@ h1 {
 }
 
 .faq-item {
-    width: calc(100% - 3.5rem);
+    width: calc(100% - 3.4rem);
     padding: 1rem;
     margin: 0.5rem;
     border: 0.25rem solid #666666;
