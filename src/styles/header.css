@@ -8,6 +8,8 @@
     background-color: #fff;
     max-height: 100px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 4px;
 }
 
 .header-image-short {
