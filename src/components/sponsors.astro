@@ -1,7 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 // import "../styles/introduction.css"; stylesheet
 // import Countdown from './countdown.astro'; any components
-// import hackSheffieldLogoImage from '../img/hacksheffield9logotransparent.png' images
+import BlackRockLogo from '../img/blackrocklogo.png'
 ---
 
 <div class="sponsors">
@@ -12,5 +13,9 @@
     <!-- Silver -->
     <div class="sponsor-card"></div>
     <!-- Bronze -->
-    <div class="sponsor-card"></div>
+    <div class="sponsor-card">
+        <Image src={BlackRockLogo} alt="blackrock logo" class="sponsor-logo"/>
+        <hr>
+        <p>BlackRock</p>
+    </div>
 </div>
