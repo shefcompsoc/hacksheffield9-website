@@ -24,6 +24,7 @@
 #faqs summary {
     margin-bottom: 0.25rem;
     color: black;
+    font-weight: bold;
     list-style: none;
     cursor: pointer;
 }
