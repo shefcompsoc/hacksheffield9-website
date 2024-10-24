@@ -38,9 +38,15 @@ h2 {
 }
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
     gap: 20px;
     padding: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
 }
 .team-member {
     background-color: #fff;
