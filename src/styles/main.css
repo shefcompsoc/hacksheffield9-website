@@ -4,7 +4,18 @@
 }
 
 html {
-    background-color: #7A8B99;
+    background-color: #ccc;
+}
+
+h1, h2, h3, p {
+    color: #363636;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
