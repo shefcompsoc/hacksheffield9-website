@@ -3,14 +3,24 @@
     src: url('/fonts/MADE Tommy Soft Bold.otf') format('opentype');
 }
 
-#team-container {
+#team-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#team-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     padding: 20px 0;
-    width: calc(100% - 2rem);
     margin-left: 1rem;
     margin-right: 1rem;
+    flex-wrap: wrap;
+    max-width: 700px;
 }
 
 h1 {
@@ -42,13 +52,6 @@ h2 {
     margin: 1rem 0;
     color: #000;
 }
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 800px;
-}
 
 @media screen and (max-width: 700px) {
     .team-grid {
@@ -56,6 +59,7 @@ h2 {
     }
 }
 .team-member {
+    margin: 10px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -63,6 +67,7 @@ h2 {
     overflow: hidden;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    min-width: 150px;
 }
 .team-member:hover {
     transform: translateY(-10px);
