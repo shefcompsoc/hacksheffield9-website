@@ -7,6 +7,14 @@ html {
     background-color: #ccc;
 }
 
+body {
+    margin: 0;
+}
+
+#page-container {
+    margin: 4px;
+}
+
 h1, h2, h3, p {
     color: #363636;
 }
