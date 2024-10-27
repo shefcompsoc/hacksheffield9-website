@@ -5,6 +5,6 @@ const link = Astro.props.link;
 const text = Astro.props.text;
 ---
 
-<form action={link} target="_blank" class="button">
-    <button type="submit">{text}</button>
-</form>
+<a href={link} target="_blank" class="button">
+    {text}
+</a>
