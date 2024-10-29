@@ -10,10 +10,6 @@
     max-width: 800px;;
 }
 
-h3 {
-    margin-top: 3rem;
-}
-
 #schedule td:first-child {
     width: 5ch;
     font-size: 3rem;

@@ -53,7 +53,7 @@ h1 {
 
 h2 {
     font-family: "MADETommy Soft Bold";
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     /*color: #363636;*/
     justify-content: center;
     margin: 0.5rem 0;
@@ -62,7 +62,7 @@ h2 {
 h3 {
     font-family: "MADETommy Soft Bold";
     justify-content: center;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 p, summary, td {
@@ -74,7 +74,7 @@ p, summary, td {
         font-size: 4rem;
     }
     h2 {
-        font-size: 2rem;
+        font-size: 4rem;
     }
     
 }
