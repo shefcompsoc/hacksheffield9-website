@@ -1,5 +1,6 @@
 ---
 import "../styles/sponsors.css";
+import FrasersGroupLogo from '../img/Logo_Frasers_Group.svg'
 import BlackRockLogo from '../img/Aladdin_BlackRock_logo_01.webp';
 import CapitalOneLogo from '../img/Capital_One_logo.webp';
 import MLHLogo from '../img/mlh-logo-color.png';
@@ -29,12 +30,17 @@ import { Image } from 'astro:assets';
         </div>
         <div class="sponsor-container">
             <h2>Gold</h2>
-        </div>
-        <div class="sponsor-container">
-            <h2>Silver</h2>
         </div> -->
         <div class="sponsor-container">
-            <!--<h3>Bronze</h3>-->
+            <h3 id="sponsor-silver-heading">Silver</h3>
+            <div class="sponsor-logo-container">
+                <a href="https://frasers.group/" target="_blank">
+                    <Image src={FrasersGroupLogo} alt="Frasers Group Logo" class="sponsor-logo sponsor-logo-silver"/>
+                </a>
+            </div>
+        </div> 
+        <div class="sponsor-container">
+            <h3 id="sponsor-bronze-heading">Bronze</h3>
             <div class="sponsor-logo-container">
                 <a href="https://www.blackrock.com/aladdin" target="_blank">
                     <Image src={BlackRockLogo} alt="Aladdin by BlackRock Logo" class="sponsor-logo"/>
