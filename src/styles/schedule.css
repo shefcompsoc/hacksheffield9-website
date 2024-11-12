@@ -21,3 +21,15 @@
     display: block;
     border-bottom: 0.15rem solid #777777;
 }
+
+.nomob{
+    display: inline;
+}
+@media (max-width: 768px) {
+    .nomob{
+        display:none;
+    }
+    #schedule td:first-child{
+        width:5ch;
+    }
+  }
