@@ -20,7 +20,7 @@ import "dseg/css/dseg.css"
         <span class="label"><p>seconds</p></span>
     </span>
 </div>
-<h3>until the hacking begins!</h3>
+<h3 id="hack-timer-desc">until the hacking begins!</h3>
 
 
 <script>
@@ -28,12 +28,11 @@ import "dseg/css/dseg.css"
 
     function updateCountdown() {
         const now = new Date().getTime();
-        const timeRemaining = targetDate - now;
+        let timeRemaining = targetDate - now;
 
         if (timeRemaining < 0) {
-            clearInterval(timerInterval);
-            document.getElementById("countdown")!.innerHTML = "Time's up!";
-            return;
+            timeRemaining = now - targetDate;
+            document.getElementById("hack-timer-desc")!.textContent = "since the hacking began!";
         }
 
         const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
@@ -41,10 +40,10 @@ import "dseg/css/dseg.css"
         const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-        document.getElementById("days")!.textContent = days.toString().padStart(2, '0');
-        document.getElementById("hours")!.textContent = hours.toString().padStart(2, '0');
-        document.getElementById("minutes")!.textContent = minutes.toString().padStart(2, '0');
-        document.getElementById("seconds")!.textContent = seconds.toString().padStart(2, '0');
+        document.getElementById("days")!.textContent = days.toString().padStart(2, '00');
+        document.getElementById("hours")!.textContent = hours.toString().padStart(2, '00');
+        document.getElementById("minutes")!.textContent = minutes.toString().padStart(2, '00');
+        document.getElementById("seconds")!.textContent = seconds.toString().padStart(2, '00');
     }
 
     const timerInterval = setInterval(updateCountdown, 1000);
