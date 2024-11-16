@@ -20,11 +20,11 @@ import "dseg/css/dseg.css"
         <span class="label"><p>seconds</p></span>
     </span>
 </div>
-<h3 id="hack-timer-desc">until the hacking begins!</h3>
+<h3 id="hack-timer-desc">until the hacking ends!</h3>
 
 
 <script>
-    const targetDate = new Date(Date.parse("2024-11-16T12:00:00.000+00:00")).getTime();
+    const targetDate = new Date(Date.parse("2024-11-17T12:00:00.000+00:00")).getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();
@@ -32,7 +32,7 @@ import "dseg/css/dseg.css"
 
         if (timeRemaining < 0) {
             timeRemaining = now - targetDate;
-            document.getElementById("hack-timer-desc")!.textContent = "since the hacking began!";
+            document.getElementById("hack-timer-desc")!.textContent = "since the hacking ended!";
         }
 
         const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
