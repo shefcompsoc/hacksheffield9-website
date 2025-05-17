@@ -1,0 +1,24 @@
+---
+export const prerender = true;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="refresh" content="0;url={targetUrl}" />
+        <title>Redirecting...</title>
+        <link rel="canonical" href="https://forms.gle/3R7KtUUG7vPdxCAK6" />
+        <script>
+        setTimeout(() => {
+            window.location.href = "https://forms.gle/3R7KtUUG7vPdxCAK6";
+        }, 0);
+        </script>
+    </head>
+    <body>
+        <p>
+        If you are not redirected automatically, <a href="https://forms.gle/3R7KtUUG7vPdxCAK6"
+            >click here</a>.
+        </p>
+    </body>
+</html>
