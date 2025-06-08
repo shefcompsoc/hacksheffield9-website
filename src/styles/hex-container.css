@@ -1,33 +1,68 @@
-.hex-row {
+@import url("variables.css");
+
+/* based on https://css-tricks.com/hexagons-and-beyond-flexible-responsive-grid-patterns-sans-media-queries/ */
+
+.hex-container {
+    --hex-height-small: 10rem;
+    /* https://math.stackexchange.com/questions/796081/width-to-height-formula-for-hexagon */
+    --hex-width-small: calc(var(--hex-height-small) * 0.8660254);
+    --hex-height-big: 20rem;
+    --margin: 0.5rem;
+    --overlap:calc(var(--margin) - (var(--hex-height-small)*0.25));
+
     display: flex;
-    flex-direction: row;
-    justify-content: center;
 }
 
-.hexagon {
-    position: relative;
-    background-color: #333;
-    overflow: hidden;
-    /* Define the hexagon shape */
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* For Safari */
-
-    /* Crucial for horizontal tessellation: overlaps each hexagon by 1/4 of its width */
-    margin-right: calc(var(--hex-size) * -0.25);
-    box-sizing: border-box; /* Ensures padding/border are included in element's total width/height */
-
-    margin: 10px;
+.hex-grid {
+    font-size: 0;
 }
 
-.hexagon img {
+/* Nudge all the hexagons to the right so some hexagons can be shifted right */
+.hex-grid::before {
+    content: "";
+    width: calc(var(--hex-width-small)/2 + var(--margin));
+    float: left;
+    height: 100%;
+
+    /* shape-outside gradient applies the nudge to every 2 rows */
+    /* height of 2 rows = 2*hex height + 4*margin - 2*overlap
+                        = 2h + 4m - 2(0.25m) = 1.5h + 4m */
+    --x: calc(1.5*var(--hex-height-small) + 3*var(--margin));
+    shape-outside: repeating-linear-gradient(
+        #0000 0 calc(var(--x) - 3px), /* transparent so row is not nudged */
+            /* slight offset to account for being between and affecting both rows */
+        #000 0 var(--x) /* not transparent, so row is nudged */
+    );
+}
+
+.hex-grid div {
+    height: var(--hex-height-small);
+    width: var(--hex-width-small);
+    background-color: var(--primary-colour);
+    margin: var(--margin);
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    display: inline-block;
+    font-size: initial;
+
+    /* Negative margin for overlap */
+    margin-bottom: var(--overlap);
+}
+
+.hex-grid div img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.hexagon:hover img {
+.hex-grid div:hover img {
     transform: scale(1.1);
+}
+
+.hex-grid * {
+    /* Negative margin for overlap */
+    margin-bottom: var(--overlap);
+    /* Note: if this isn't being applied, other CSS is probably taking selector precedence */
 }
 
 @media (max-width: 600px) {
