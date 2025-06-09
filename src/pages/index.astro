@@ -1,36 +1,25 @@
 ---
-import '../styles/main.css';
-import Header from '../components/header.astro';
-import Introduction from '../components/introduction.astro';
-import FAQ from '../components/faq.astro';
-import Team from '../components/team.astro';
-import Schedule from '../components/schedule.astro';
-import Sponsors from '../components/sponsors.astro';
-import Footer from '../components/footer.astro';
-import Gallery from '../components/gallery.astro';
-import '../styles/main.css';
+import Header from "../components/header.astro";
+import Landing from "../components/landing.astro";
+import Team from "../components/team.astro";
+import Countdown from "../components/countdown.astro";
 ---
-
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>hackSheffield 9</title>
-        <link rel="icon" type="image/png" href="/favicon.png">
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="hackSheffield 9 is a hackathon that will take place on the 16th-17th of November 2024. It will be a weekend full of coding, workshops, and fun!"/>
-    </head>
-    <body>
-        <div id="page-container">        
-            <Header />
-            <Introduction />
-            <FAQ />
-            <Schedule />
-            <Sponsors />
-            <Team />
-            <!--<Gallery />-->
-        </div>
-        <Footer />
-        <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/eu?utm_source=eu-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg" alt="Major League Hacking 2025 Hackathon Season" style="width:100%"></a>
-    </body> 
+<html>
+	<head>
+		<title>HackSheffield10</title>
+		<link rel="icon" type="image/png" href="/hs10_logo.svg">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="HackSheffield10 is The University of Sheffield flagship hackathon, that will take place on the 15th-16th of November 2025. It will be a weekend full of coding, workshops, and fun!"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	</head>
+	<body style="background-color: #0D1321; background-image: url(../../public/nnnoise.svg); background-repeat: repeat; background-attachment: fixed; margin: 0;">
+		<Header />
+		<Landing />
+		<Countdown />
+		<Team />
+		<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/eu?utm_source=eu-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2026/mlh-trust-badge-2026-white.svg" alt="Major League Hacking 2026 Hackathon Season" style="width:100%"></a>
+	</body>
 </html>

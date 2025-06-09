@@ -1,13 +1,9 @@
 ---
-import { Image } from 'astro:assets';
-import hackSheffieldLogoImage from '../img/hacksheffield9logotransparent.png'
-import hackSheffieldLogoImageShort from '../img/hs9 logo short.png'
-import Navlinks from './navlinks.astro';
-import '../styles/header.css';
+import NavLinks from "./navlinks.astro"
+import "../styles/header.css"
 ---
-
-<div id="header">
-    <Image src={hackSheffieldLogoImageShort} alt="hackSheffield 9 Logo" class="header-image-short"/>
-    <Image src={hackSheffieldLogoImage} alt="hackSheffield 9 Logo" class="header-image"/>
-    <Navlinks />
-</div>
+<section id="header">
+    <h3 id="header-title">HackSheffield10</h3>
+    <NavLinks />
+    <div id="placeholder" style="width: 30%;"></div>
+</section>
