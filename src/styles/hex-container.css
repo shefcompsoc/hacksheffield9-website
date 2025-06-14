@@ -3,12 +3,9 @@
 /* based on https://css-tricks.com/hexagons-and-beyond-flexible-responsive-grid-patterns-sans-media-queries/ */
 
 .hex-container {
-    --hex-height-small: 10rem;
     /* https://math.stackexchange.com/questions/796081/width-to-height-formula-for-hexagon */
-    --hex-width-small: calc(var(--hex-height-small) * 0.8660254);
-    --hex-height-big: 20rem;
-    --margin: 0.5rem;
-    --overlap:calc(var(--margin) - (var(--hex-height-small)*0.25));
+    --hex-width: calc(var(--hex-height) * 0.8660254);
+    --overlap:calc(var(--margin) - (var(--hex-height)*0.25));
 
     display: flex;
 }
@@ -20,14 +17,14 @@
 /* Nudge all the hexagons to the right so some hexagons can be shifted right */
 .hex-grid::before {
     content: "";
-    width: calc(var(--hex-width-small)/2 + var(--margin));
+    width: calc(var(--hex-width)/2 + var(--margin));
     float: left;
     height: 100%;
 
     /* shape-outside gradient applies the nudge to every 2 rows */
     /* height of 2 rows = 2*hex height + 4*margin - 2*overlap
                         = 2h + 4m - 2(0.25m) = 1.5h + 4m */
-    --x: calc(1.5*var(--hex-height-small) + 3*var(--margin));
+    --x: calc(1.5*var(--hex-height) + 3*var(--margin));
     shape-outside: repeating-linear-gradient(
         #0000 0 calc(var(--x) - 3px), /* transparent so row is not nudged */
             /* slight offset to account for being between and affecting both rows */
@@ -36,8 +33,8 @@
 }
 
 .hex-grid div {
-    height: var(--hex-height-small);
-    width: var(--hex-width-small);
+    height: var(--hex-height);
+    width: var(--hex-width);
     background-color: var(--primary-colour);
     margin: var(--margin);
     clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
