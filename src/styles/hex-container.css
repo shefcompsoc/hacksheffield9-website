@@ -1,4 +1,4 @@
-@import url("variables.css");
+@import url("root.css");
 
 /* based on https://css-tricks.com/hexagons-and-beyond-flexible-responsive-grid-patterns-sans-media-queries/ */
 
@@ -6,7 +6,6 @@
     /* https://math.stackexchange.com/questions/796081/width-to-height-formula-for-hexagon */
     --hex-width: calc(var(--hex-height) * 0.8660254);
     --overlap:calc(var(--margin) - (var(--hex-height)*0.25));
-
     display: flex;
 }
 
@@ -43,9 +42,17 @@
 
     /* Negative margin for overlap */
     margin-bottom: var(--overlap);
+
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Quantico-Bold", Arial;
+    color: var(--text-colour);
+    font-size: 1.5rem;
 }
 
-.hex-grid div img {
+/* CSS from the placeholder Team grid */
+/* .hex-grid div img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -54,13 +61,13 @@
 
 .hex-grid div:hover img {
     transform: scale(1.1);
-}
+} */
 
-.hex-grid * {
+/* .hex-grid > * { */
     /* Negative margin for overlap */
-    margin-bottom: var(--overlap);
+    /* margin-bottom: var(--overlap); */
     /* Note: if this isn't being applied, other CSS is probably taking selector precedence */
-}
+/* } */
 
 @media (max-width: 600px) {
     .hexagon {
