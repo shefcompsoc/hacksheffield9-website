@@ -2,12 +2,23 @@
 import "../styles/hex-container.css"
 
 interface Props {
-    style?: string,
+    hexHeight: string,
+    margin: string,
+    width: string,
+    height?: string,
 };
 
-const { style = "height: fit-content; width: 100%;" } = Astro.props;
+const {
+    hexHeight,
+    margin,
+    width,
+    height = "fit-content",
+} = Astro.props;
 ---
-<div class="hex-container" style={style}>
+<div
+    class="hex-container"
+    style={`height: ${height}; width: ${width}; --hex-height: ${hexHeight}; --margin: ${margin};`}
+>
     <div class="hex-grid">
         <slot />
     </div>
