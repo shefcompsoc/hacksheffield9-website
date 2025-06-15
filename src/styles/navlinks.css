@@ -1,6 +1,6 @@
 @import url("root.css");
 
-#navlinks {
+#nav-links {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -9,28 +9,54 @@
 }
 
 .nav-link {
-    background-color: #ce29f2ff;
-    color: whitesmoke;
+    background-color: var(--primary-colour);
+    color: var(--text-colour);
     text-decoration: none;
     font-family: "Quantico", Arial, Helvetica, sans-serif;
     font-size: 1.2em;
+
     padding: 5px 10px;
     margin: 0 5px;
-    border-radius: 5px;
-    transition: 0.3s;
-    border-bottom: solid;
-    border-color: rgb(148, 36, 233);
-    border-width: 3px;
     width: 30%;
+
+    --before-offset: 0.4rem;
+    border-radius: 0.6rem;
     text-align: center;
+
+    position: relative;
+    transform-style: preserve-3d; /* so the translateZ below works */
+    transition: margin-top 100ms, /* for smooth movement back up without moving above elements */
+                transform 100ms,
+                background-color 300ms;
 }
 
 .nav-link:hover {
     background-color: rgb(148, 36, 233);
     border-color: rgb(89, 23, 193);
-    transition: 0.3s;
+}
+
+.nav-link::before {
+    transform: translateZ(-0.1rem); /* Moves pseudo elements behind */
+    transition: transform 100ms, background-color 0.3s;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    right: 0;
+    bottom: calc(0rem - var(--before-offset));
+    border-radius: inherit;
+
+    background-color: rgb(148, 36, 233);
+}
+
+.nav-link:hover::before {
+    background-color: rgb(89, 23, 193);
 }
 
 .nav-link:active {
-    border: none;
+    transform: translateY(var(--before-offset));
+}
+.nav-link:active::before {
+    transform: translate3d(0, calc(0rem - var(--before-offset)), -0.1rem);
 }
