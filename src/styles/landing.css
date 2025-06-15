@@ -11,7 +11,7 @@
 
 h2 {
     font-family: "Quantico-Bold", Arial;
-    color: whitesmoke;
+    color: var(--text-colour);
     font-weight: bold;
     font-size: 72px;
     font-weight: 700;
@@ -21,7 +21,7 @@ h2 {
 
 h3 {
     font-family: "Quantico", Arial;
-    color: whitesmoke;
+    color: var(--text-colour);
     font-size: 36px;
     margin: 0;
     text-align: center;

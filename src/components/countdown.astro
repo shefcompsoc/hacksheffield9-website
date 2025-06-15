@@ -1,27 +1,35 @@
 ---
 import "../styles/countdown.css";
+import HexContainer from "./hex-container.astro";
 ---
-<div>
-    <h2>COUNTDOWN</h2>
-    <div class="countdown-timer">
-        <span class="countdown-block">
-            <span class="number"><p id="days">00</p></span>
-            <span class="label"><p>days</p></span>
-        </span>
-        <span class="countdown-block">
-            <span class="number"><p id="hours">00</p></span>
-            <span class="label"><p>hours</p></span>
-        </span>
-        <span class="countdown-block">
-            <span class="number"><p id="minutes">00</p></span>
-            <span class="label"><p>minutes</p></span>
-        </span>
-        <span class="countdown-block" id="seconds-block">
-            <span class="number"><p id="seconds">00</p></span>
-            <span class="label"><p>seconds</p></span>
-        </span>
-    </div>
-    <h3 id="hack-timer-desc">until the hacking begins!</h3>
+<div class="countdown-timer">
+    <h3>COUNTDOWN</h3>
+    <HexContainer width="22rem" hexHeight="9rem" margin="0.4rem">
+        <div>
+            <span class="countdown-block">
+                <span class="number"><p id="days">00</p></span>
+                <span class="label"><p>days</p></span>
+            </span>
+        </div>
+        <div>
+            <span class="countdown-block">
+                <span class="number"><p id="hours">00</p></span>
+                <span class="label"><p>hours</p></span>
+            </span>
+        </div>
+        <div>
+            <span class="countdown-block">
+                <span class="number"><p id="minutes">00</p></span>
+                <span class="label"><p>minutes</p></span>
+            </span>
+        </div>
+        <div id="seconds-block">
+            <span class="countdown-block">
+                <span class="number"><p id="seconds">00</p></span>
+                <span class="label"><p>seconds</p></span>
+            </span>
+        </div>
+    </HexContainer>
 </div>
 
 <script>
@@ -31,18 +39,16 @@ import "../styles/countdown.css";
         const now = new Date().getTime();
         let timeRemaining = targetDate - now;
 
-        const desc = document.getElementById("hack-timer-desc");
         const daysElem = document.getElementById("days");
         const hoursElem = document.getElementById("hours");
         const minutesElem = document.getElementById("minutes");
         const secondsElem = document.getElementById("seconds");
         const secondsBlock = document.getElementById("seconds-block");
 
-        if (!desc || !daysElem || !hoursElem || !minutesElem || !secondsElem || !secondsBlock) return;
+        if (!daysElem || !hoursElem || !minutesElem || !secondsElem || !secondsBlock) return;
 
         if (timeRemaining < 0) {
             timeRemaining = now - targetDate;
-            desc.textContent = "since the hacking began!";
         }
 
         const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
@@ -53,13 +59,7 @@ import "../styles/countdown.css";
         daysElem.textContent = days.toString().padStart(2, '0');
         hoursElem.textContent = hours.toString().padStart(2, '0');
         minutesElem.textContent = minutes.toString().padStart(2, '0');
-        
-        if (days < 7) {
-            secondsElem.textContent = seconds.toString().padStart(2, '0');
-            secondsBlock.style.display = "inline-block";
-        } else {
-            secondsBlock.style.display = "none";
-        }
+        secondsElem.textContent = seconds.toString().padStart(2, '0');
     }
 
     setInterval(updateCountdown, 1000);

@@ -1,51 +1,30 @@
-@font-face {
-    font-family: "Quantico";
-    src: url(/public/Quantico-Regular.ttf);
-}
-
-@font-face {
-    font-family: "Quantico-Bold";
-    src: url(/public/Quantico-Bold.ttf);
-}
+@import url("root.css");
 
 .countdown-timer {
+    margin-top: 10rem;
     display: flex;
-    width: 100%;
-    justify-content: center;
+    flex-direction: column;
+    font-family: 'Quantico-Bold', Arial;
 }
 
 .countdown-timer .number {
-    font-size: 5em;
-    font-family: 'Quantico', Arial;
-    font-weight: bold;
-    color: whitesmoke;
+    color: var(--text-colour);
     margin: 0;
 }
 
-.countdown-timer .number p {
-    font-family: 'Quantico', Arial;
+.countdown-timer .label {
+    font-size: 1rem;
+    text-align: center;
 }
 
 .countdown-timer .label p {
-    font-family: 'Quantico', Arial;
     text-align: center;
 }
 
 .countdown-block {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 0 3%;
-}
-
-.countdown-timer .label {
-    font-size: 1em;
-    text-align: center;
-    font-family: 'Quantico', Arial;
-    color: whitesmoke;
-}
-
-.countdown-timer .countdown-block {
-    display: flex;
 }
 
 p {
