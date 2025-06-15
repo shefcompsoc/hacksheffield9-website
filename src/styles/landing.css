@@ -44,29 +44,18 @@ h3 {
             drop-shadow(0 0 30px rgba(195, 51, 235, 0.8));
 }
 
-#ticket-button {
-    background-color: #ce29f2ff;
-    color: whitesmoke;
-    text-decoration: none;
-    font-family: "Quantico", Arial, Helvetica, sans-serif;
-    font-size: 1.2em;
-    padding: 5px 10px;
-    margin: 0 5px;
-    border-radius: 5px;
-    transition: 0.3s;
-    border-bottom: solid;
-    border-color: rgb(148, 36, 233);
-    border-width: 3px;
-    width: 30%;
+#register-interest {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 10vh;
     text-align: center;
+    gap: 1rem;
+    font-size: 1.5rem;
 }
 
-#ticket-button:hover {
-    background-color: rgb(148, 36, 233);
-    border-color: rgb(89, 23, 193);
-    transition: 0.3s;
-}
-
-#ticket-button:active {
-    border: none;
+#register-interest > .nav-link {
+    width: 80%;
+    padding: 1rem 1rem;
 }
