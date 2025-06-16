@@ -1,24 +1,44 @@
 @font-face {
-    font-family: "MADETommy Soft Regular";
-    src: url('/fonts/MADE Tommy Soft Regular.otf') format('opentype');
+    font-family: "Quantico";
+    src: url(/public/Quantico-Regular.ttf);
 }
 
-.navlink {
-    font-family: "MADETommy Soft Regular";
+@font-face {
+    font-family: "Quantico-Bold";
+    src: url(/public/Quantico-Bold.ttf);
+}
+
+#navlinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+
+.nav-link {
+    background-color: #ce29f2ff;
+    color: whitesmoke;
     text-decoration: none;
-    color: #fff;
-    background-color: #363636;
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
+    font-family: "Quantico", Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: 0.3s;
+    border-bottom: solid;
+    border-color: rgb(148, 36, 233);
+    border-width: 3px;
+    width: 30%;
+    text-align: center;
 }
 
-.navlinks {
-    display: none;
+.nav-link:hover {
+    background-color: rgb(148, 36, 233);
+    border-color: rgb(89, 23, 193);
+    transition: 0.3s;
 }
 
-@media screen and (min-width: 900px) {
-    .navlinks {
-        margin-right: 10rem;
-        display: block;
-    }
+.nav-link:active {
+    border: none;
 }

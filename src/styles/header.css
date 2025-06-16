@@ -1,37 +1,37 @@
+@font-face {
+    font-family: "Quantico";
+    src: url(/public/Quantico-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Quantico-Bold";
+    src: url(/public/Quantico-Bold.ttf);
+}
+
 #header {
+    margin: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    border-radius: 1rem;
-    background-color: #fff;
     max-height: 100px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
     position: sticky;
-    top: 4px;
+    top: 20px;
+    z-index: 1000;
+
+    margin-bottom: 100dvh;
 }
 
-.header-image-short {
-    width: 50%;
-    max-width: 200px;
-    height: auto;
-}
-
-.header-image{
-    width: 50%;
-    max-width: 500px;
-    min-width: 300px;
-    height: auto;
-    display: none;
-}
-
-@media screen and (min-width: 500px) {
-    .header-image {
-        display: block;
-    }
-    .header-image-short {
-        display: none;
-    }
-    
+#header-title {
+    font-family: "Quantico", Arial;
+    width: 30%;
 }

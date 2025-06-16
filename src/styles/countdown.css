@@ -1,31 +1,47 @@
+@font-face {
+    font-family: "Quantico";
+    src: url(/public/Quantico-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Quantico-Bold";
+    src: url(/public/Quantico-Bold.ttf);
+}
+
 .countdown-timer {
-    display: grid;
-    grid-template-rows: min-content min-content;
-    grid-template-columns: min-content min-content;
+    display: flex;
     width: 100%;
     justify-content: center;
 }
 
 .countdown-timer .number {
     font-size: 5em;
-    font-family: 'DSEG7-Classic';
+    font-family: 'Quantico', Arial;
     font-weight: bold;
+    color: whitesmoke;
     margin: 0;
 }
 
 .countdown-timer .number p {
-    font-family: 'DSEG7-Classic';
+    font-family: 'Quantico', Arial;
 }
 
 .countdown-timer .label p {
-    font-family: 'DSEG14-Classic';
+    font-family: 'Quantico', Arial;
+    text-align: center;
+}
+
+.countdown-block {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 3%;
 }
 
 .countdown-timer .label {
     font-size: 1em;
-    writing-mode: vertical-lr;
     text-align: center;
-    font-family: 'DSEG14-Classic';
+    font-family: 'Quantico', Arial;
+    color: whitesmoke;
 }
 
 .countdown-timer .countdown-block {
@@ -34,4 +50,8 @@
 
 p {
     margin: auto;
+}
+
+#hack-timer-desc, h2 {
+    text-align: center;
 }
