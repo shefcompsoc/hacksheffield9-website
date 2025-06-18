@@ -3,7 +3,7 @@ import "../styles/countdown.css";
 import HexContainer from "./hex-container.astro";
 ---
 <div class="countdown-timer">
-    <h3>COUNTDOWN</h3>
+    <h3 style="font-size: 2rem;">COUNTDOWN</h3>
     <HexContainer width="22rem" hexHeight="9rem" margin="0.4rem">
         <div>
             <span class="countdown-block">
@@ -23,7 +23,7 @@ import HexContainer from "./hex-container.astro";
                 <span class="label"><p>minutes</p></span>
             </span>
         </div>
-        <div id="seconds-block">
+        <div>
             <span class="countdown-block">
                 <span class="number"><p id="seconds">00</p></span>
                 <span class="label"><p>seconds</p></span>
@@ -43,9 +43,8 @@ import HexContainer from "./hex-container.astro";
         const hoursElem = document.getElementById("hours");
         const minutesElem = document.getElementById("minutes");
         const secondsElem = document.getElementById("seconds");
-        const secondsBlock = document.getElementById("seconds-block");
 
-        if (!daysElem || !hoursElem || !minutesElem || !secondsElem || !secondsBlock) return;
+        if (!daysElem || !hoursElem || !minutesElem || !secondsElem) return;
 
         if (timeRemaining < 0) {
             timeRemaining = now - targetDate;
