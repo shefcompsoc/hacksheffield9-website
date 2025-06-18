@@ -12,10 +12,10 @@
 
 @font-face {
     font-family: "Quantico";
-    src: url(/public/Quantico-Regular.ttf);
+    src: url(/fonts/Quantico-Regular.ttf);
 }
 
 @font-face {
     font-family: "Quantico-Bold";
-    src: url(/public/Quantico-Bold.ttf);
+    src: url(/fonts/Quantico-Bold.ttf);
 }

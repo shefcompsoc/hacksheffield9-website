@@ -2,6 +2,8 @@
 
 /* based on https://css-tricks.com/hexagons-and-beyond-flexible-responsive-grid-patterns-sans-media-queries/ */
 
+/* NOTE: if the overlap breaks try adding a `margin-bottom: var(--overlap);` style to the elements inside the hexagon */
+
 .hex-container {
     /* https://math.stackexchange.com/questions/796081/width-to-height-formula-for-hexagon */
     --hex-width: calc(var(--hex-height) * 0.8660254);
@@ -13,7 +15,6 @@
     font-size: 0;
 }
 
-/* Nudge all the hexagons to the right so some hexagons can be shifted right */
 .hex-grid::before {
     content: "";
     width: calc(var(--hex-width)/2 + var(--margin));
@@ -62,12 +63,6 @@
 .hex-grid div:hover img {
     transform: scale(1.1);
 } */
-
-/* .hex-grid > * { */
-    /* Negative margin for overlap */
-    /* margin-bottom: var(--overlap); */
-    /* Note: if this isn't being applied, other CSS is probably taking selector precedence */
-/* } */
 
 @media (max-width: 600px) {
     .hexagon {

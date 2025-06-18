@@ -6,6 +6,7 @@ interface Props {
     margin: string,
     width: string,
     height?: string,
+    extraStyles?: string,
 };
 
 const {
@@ -13,11 +14,12 @@ const {
     margin,
     width,
     height = "fit-content",
+    extraStyles = "",
 } = Astro.props;
 ---
 <div
     class="hex-container"
-    style={`height: ${height}; width: ${width}; --hex-height: ${hexHeight}; --margin: ${margin};`}
+    style={`height: ${height}; width: ${width}; --hex-height: ${hexHeight}; --margin: ${margin}; ${extraStyles}`}
 >
     <div class="hex-grid">
         <slot />

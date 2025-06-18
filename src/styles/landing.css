@@ -1,8 +1,7 @@
 @import url("root.css");
 
 #landing-container {
-    width: 40%;
-    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,7 +12,7 @@ h2 {
     font-family: "Quantico-Bold", Arial;
     color: var(--text-colour);
     font-weight: bold;
-    font-size: 72px;
+    font-size: 4.5rem;
     font-weight: 700;
     margin: 0;
     text-align: center;
@@ -22,16 +21,18 @@ h2 {
 h3 {
     font-family: "Quantico", Arial;
     color: var(--text-colour);
-    font-size: 36px;
+    font-size: 2.25rem;
     margin: 0;
     text-align: center;
 }
 
 #main-logo {
     display: block;
-    margin: 50px auto;
+    margin-top: 1.8rem;
     padding-top: 5%;
     width: 25dvw;
+    max-width: 460px;
+    min-width: 250px;
 
     filter: drop-shadow(0 0 8px rgba(195, 50, 235, 0.8))
             drop-shadow(0 0 15px rgba(195, 50, 235, 0.6));
@@ -58,4 +59,40 @@ h3 {
 #register-interest > .nav-link {
     width: 80%;
     padding: 1rem 1rem;
+}
+
+@media (max-width: 1300px) {
+    h2 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    #register-interest {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1001px) { /* opposite of max-width: 1000px */
+    #landing-container {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0); /* centre the element */
+        z-index: 9999;
+    }
+}
+
+@media (max-width: 500px) {
+    #title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0rem;
+    }
+
+    #title > span {
+        line-height: 3rem; /* equal to font-size, so no space between lines */
+        padding: 0 11px; /* ...but maintain the gap between the title and above/below elements */
+    }
 }
