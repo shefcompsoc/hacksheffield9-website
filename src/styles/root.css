@@ -1,0 +1,21 @@
+/* Included in the <head> of the website              */
+/* Use this file for global variables                 */
+/* Other CSS files still need to import this manually */
+
+:root {
+    --primary-colour: #ce29f2;
+    --secondary-colour: #b218f2;
+    --tertiary-colour: #f4e5ff;
+    --text-colour: whitesmoke;
+    --background-colour: #0D1321;
+}
+
+@font-face {
+    font-family: "Quantico";
+    src: url(/fonts/Quantico-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Quantico-Bold";
+    src: url(/fonts/Quantico-Bold.ttf);
+}

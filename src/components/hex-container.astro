@@ -2,20 +2,26 @@
 import "../styles/hex-container.css"
 
 interface Props {
-  src: string;
-  alt: string;
-  size?: number;
-}
+    hexHeight: string,
+    margin: string,
+    width: string,
+    height?: string,
+    extraStyles?: string,
+};
 
-const { src, alt, size = 200 } = Astro.props;
-
-const hexagonHeight = size * (2 / Math.sqrt(3));
+const {
+    hexHeight,
+    margin,
+    width,
+    height = "fit-content",
+    extraStyles = "",
+} = Astro.props;
 ---
-<div class="hexagon"
-  style={{
-    width: `${size}px`,
-    height: `${hexagonHeight}px`,
-  }}
+<div
+    class="hex-container"
+    style={`height: ${height}; width: ${width}; --hex-height: ${hexHeight}; --margin: ${margin}; ${extraStyles}`}
 >
-  <img src={src} alt={alt} />
+    <div class="hex-grid">
+        <slot />
+    </div>
 </div>
