@@ -39,11 +39,11 @@
     margin: var(--margin);
     clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
     display: inline-block;
-    font-size: initial;
 
     /* Negative margin for overlap */
     margin-bottom: var(--overlap);
 
+    -webkit-align-content: center;
     align-content: center;
     text-align: center;
     vertical-align: middle;
