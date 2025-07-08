@@ -3,6 +3,7 @@ import Mlh from "../components/mlh.astro";
 import Landing from "../components/landing.astro";
 import Countdown from "../components/countdown.astro";
 import Compsoc from "../components/compsoc.astro";
+import Footer from "../components/footer.astro";
 ---
 <html>
 	<head>
@@ -17,12 +18,15 @@ import Compsoc from "../components/compsoc.astro";
 		<link href="../styles/root.css" rel="stylesheet">
 	</head>
 	<body>
-		<Landing />
 		<main>
-			<Countdown />
-			<Compsoc />
+			<Landing />
+			<div class="details">
+				<Countdown />
+				<Compsoc />
+			</div>
 		</main>
 		<Mlh />
+		<Footer />
 	</body>
 </html>
 
@@ -37,6 +41,12 @@ import Compsoc from "../components/compsoc.astro";
 	}
 
 	main {
+		width: 100%;
+		height: fit-content;
+		min-height: 100vh;
+	}
+
+	.details {
 		width: 85%;
 		padding: 8rem 7.5%;
 		display: flex;
@@ -45,8 +55,18 @@ import Compsoc from "../components/compsoc.astro";
 		justify-content: space-between;
 	}
 
+	@media (min-width: 1001px) { /* opposite of max-width: 1000px */
+		.details {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, 0); /* centre the element */
+			z-index: 9999;
+		}
+	}
+
 	@media (max-width: 1000px) {
-		main {
+		.details {
 			flex-direction: column;
 			justify-content: baseline;
 			align-items: center;
@@ -54,7 +74,7 @@ import Compsoc from "../components/compsoc.astro";
 	}
 
 	@media (max-width: 1300px) {
-		main {
+		.details {
 			width: 94%;
 			padding: 3rem 3%;
 			gap: 5rem;
