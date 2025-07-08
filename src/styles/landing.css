@@ -74,15 +74,6 @@ h3 {
     }
 }
 
-@media (min-width: 1001px) { /* opposite of max-width: 1000px */
-    #landing-container {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0); /* centre the element */
-        z-index: 9999;
-    }
-}
-
 @media (max-width: 500px) {
     #title {
         display: flex;
