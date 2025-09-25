@@ -12,7 +12,7 @@ h1 {
 }
 
 #faqs {
-    width: 100%;
+    width: 90%;
     max-width: 800px;
     display: flex;
     flex-direction: column;
@@ -23,8 +23,9 @@ h1 {
     width: calc(100% - 3.4rem);
     padding: 1rem;
     margin: 0.5rem;
-    background-color: var(--primary-colour);
+    background-color: purple;
     border: 0.25rem solid var(--secondary-colour);
+    border-color: var(--primary-colour);
     border-radius: 1rem;
 }
 
@@ -32,6 +33,7 @@ h1 {
     margin-bottom: 0.25rem;
     color: white;
     font-weight: bold;
+    font-size: 1.25rem;
     list-style: none;
     cursor: pointer;
 }
@@ -41,5 +43,5 @@ h1 {
 }
 
 #faqs details>p {
-    color: black;
+    color: white;
 }

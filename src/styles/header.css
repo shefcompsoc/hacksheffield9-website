@@ -30,3 +30,9 @@
     height: 50px;
     width: auto;
 }
+
+@media (max-width: 1000px) {
+    #header {
+        display: none;
+    }
+}

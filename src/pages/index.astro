@@ -6,6 +6,8 @@ import Compsoc from "../components/compsoc.astro";
 import Footer from "../components/footer.astro";
 import Faq from "../components/faq.astro";
 import Header from "../components/header.astro";
+import Sponsors from "../components/sponsors.astro";
+import Gallery from "../components/gallery.astro";
 ---
 <html>
 	<head>
@@ -28,7 +30,12 @@ import Header from "../components/header.astro";
 				<Countdown />
 				<Compsoc />
 			</div>
-			<Faq />
+			<hr id="faq" style="width: 85%; border: 1px solid var(--primary-colour); margin: 2rem auto; scroll-margin-top:100px;">
+			<Faq id="faq"/>
+			<hr id="sponsors" style="width: 85%; border: 1px solid var(--primary-colour); margin: 2rem auto; scroll-margin-top:100px;">
+			<Sponsors/>
+			<hr id="gallery" style="width: 85%; border: 1px solid var(--primary-colour); margin: 2rem auto; scroll-margin-top:100px;">
+			<Gallery />
 		</main>
 		<Mlh />
 		<Footer />
@@ -39,6 +46,7 @@ import Header from "../components/header.astro";
 	body {
 		background-color: var(--background-colour);
 		background-image: url(/nnnoise.svg);
+		background-attachment: fixed;
 		background-repeat: repeat;
 		margin: 0;
 		color: var(--text-colour);
