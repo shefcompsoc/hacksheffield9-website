@@ -1,12 +1,13 @@
 ---
 import Mlh from "../components/mlh.astro";
-import Landing from "../components/landing.astro";
-import Countdown from "../components/countdown.astro";
-import Compsoc from "../components/compsoc.astro";
 import Footer from "../components/footer.astro";
-import Faq from "../components/faq.astro";
 import Header from "../components/header.astro";
+import FrasersGroupLogo from '../img/Logo_Frasers_Group.svg';
+import GrafanaLogo from '../img/Grafana_logo.svg';
+import { Image } from 'astro:assets';
+import HexContainer from "../components/hex-container.astro";
 ---
+
 <html>
 	<head>
 		<title>HackSheffield10</title>
@@ -20,19 +21,31 @@ import Header from "../components/header.astro";
 		<link href="../styles/root.css" rel="stylesheet">
 		
 	</head>
-	<body>
-		<Header />
-		<main>
-			<Landing />
-			<div class="details">
-				<Countdown />
-				<Compsoc />
-			</div>
-			<Faq />
-		</main>
-		<Mlh />
-		<Footer />
-	</body>
+
+    <body>
+        <Header />
+        <main>
+            <h1>Sponsors</h1>
+            <h2 class="silver_sponsors_header">Silver Sponsors</h2>
+            <HexContainer width="30rem" hexHeight="15rem" margin="0.5rem" extraStyles="margin: 2rem auto;">
+				<div>
+					<Image
+						src={GrafanaLogo}
+						alt="Grafana Logo"
+						style="width: 70%; height: auto;margin-top: -1rem;"
+					/>
+				</div>
+				<div>
+					<Image
+						src={FrasersGroupLogo}
+						alt="Frasers Group Logo"
+						style="width: 80%; height: auto; margin-top: 0rem;"
+					/>
+				</div>
+        </main>
+        <Mlh />
+        <Footer />
+    </body>
 </html>
 
 <style>
@@ -59,6 +72,39 @@ import Header from "../components/header.astro";
 		flex-wrap:nowrap;
 		justify-content: space-between;
 	}
+
+    h1 {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 5rem;
+        color: var(--primary-colour);
+    }
+
+    .silver_sponsors_header {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 3rem;
+        color: Silver;
+    }
+
+    .silver-sponsors {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        padding: 2rem;
+        border-radius: 1rem;
+        margin: 2rem auto;
+        width: fit-content;
+    }
+
+    .inverted-logo {
+        filter: invert(1);
+        /* Use this class for logos with dark backgrounds to make them visible on the page */
+    }
+
 
 	@media (min-width: 1001px) { /* opposite of max-width: 1000px */
 		.details {

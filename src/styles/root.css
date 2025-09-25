@@ -19,3 +19,7 @@
     font-family: "Quantico-Bold";
     src: url(/fonts/Quantico-Bold.ttf);
 }
+
+.hidden {
+  display: none;
+}

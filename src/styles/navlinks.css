@@ -5,7 +5,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 40%;
+    width: 50%;
 }
 
 .nav-link {
@@ -49,6 +49,7 @@
 
     background-color: rgb(148, 36, 233);
 }
+
 
 .nav-link:hover::before {
     background-color: rgb(89, 23, 193);

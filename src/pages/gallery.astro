@@ -1,0 +1,112 @@
+---
+import Mlh from "../components/mlh.astro";
+import Footer from "../components/footer.astro";
+import Header from "../components/header.astro";
+import { Image, Picture } from "astro:assets";
+
+const imageFiles = await Astro.glob("../img/gallery/*");
+---
+
+<html>
+	<head>
+		<title>HackSheffield10</title>
+		<link rel="icon" type="image/png" href="/hs10_logo.svg" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="HackSheffield10 is The University of Sheffield flagship hackathon, that will take place on the 29th-30th of November 2025. It will be a weekend full of coding, workshops, and fun!"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="../styles/root.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<Header />
+		<main>
+			<div>
+				<h1>Gallery</h1>
+				<div class="details">
+					{imageFiles.map((img) => (
+						<Picture
+							src={img.default}
+							alt="Gallery Image"
+							style="width: 25rem; height: auto; border-radius: 1rem; padding: 0.5rem; background-color: white; margin: 0rem;"
+						/>
+					))}
+				</div>
+			</div>
+		</main>
+		<Mlh />
+		<Footer />
+	</body>
+
+	<style>
+		body {
+			background-color: var(--background-colour);
+			background-image: url(/nnnoise.svg);
+			background-repeat: repeat;
+			margin: 0;
+			color: var(--text-colour);
+			font-family: "Quantico", Arial, Helvetica, sans-serif;
+		}
+
+		main {
+			width: 100%;
+			height: fit-content;
+			min-height: 100vh;
+		}
+
+		.details {
+			width: 85%;
+			padding: 8rem 7.5%;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 1rem;
+			font-size: 5rem;
+			color: var(--primary-colour);
+		}
+
+
+		img {
+			border-radius: 1rem;
+			padding: 1rem;
+			background-color:;
+		}
+
+		@media (min-width: 1001px) {
+			.details {
+				top: 10%;
+				left: 50%;
+				z-index: 500;
+			}
+		}
+
+		@media (max-width: 1000px) {
+			.details {
+				flex-direction: column;
+				justify-content: baseline;
+				align-items: center;
+			}
+		}
+
+		@media (max-width: 1800px) {
+			.details {
+				width: 94%;
+				padding: 0rem 3%;
+				gap: 5rem;
+			}
+		}
+	</style>
+</html>
