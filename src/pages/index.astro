@@ -4,6 +4,10 @@ import Landing from "../components/landing.astro";
 import Countdown from "../components/countdown.astro";
 import Compsoc from "../components/compsoc.astro";
 import Footer from "../components/footer.astro";
+import Faq from "../components/faq.astro";
+import Header from "../components/header.astro";
+import Sponsors from "../components/sponsors.astro";
+import Gallery from "../components/gallery.astro";
 ---
 <html>
 	<head>
@@ -11,19 +15,27 @@ import Footer from "../components/footer.astro";
 		<link rel="icon" type="image/png" href="/hs10_logo.svg">
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="HackSheffield10 is The University of Sheffield flagship hackathon, that will take place on the 15th-16th of November 2025. It will be a weekend full of coding, workshops, and fun!"/>
+		<meta name="description" content="HackSheffield10 is The University of Sheffield flagship hackathon, that will take place on the 29th-30th of November 2025. It will be a weekend full of coding, workshops, and fun!"/>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 		<link href="../styles/root.css" rel="stylesheet">
+		
 	</head>
 	<body>
+		<Header />
 		<main>
 			<Landing />
 			<div class="details">
 				<Countdown />
 				<Compsoc />
 			</div>
+			<hr id="faq" style="width: 85%; border: 1px solid var(--primary-colour); margin: 2rem auto; scroll-margin-top:100px;">
+			<Faq id="faq"/>
+			<hr id="sponsors" style="width: 85%; border: 1px solid var(--primary-colour); margin: 2rem auto; scroll-margin-top:100px;">
+			<Sponsors/>
+			<hr id="gallery" style="width: 85%; border: 1px solid var(--primary-colour); margin: 2rem auto; scroll-margin-top:100px;">
+			<Gallery />
 		</main>
 		<Mlh />
 		<Footer />
@@ -34,6 +46,7 @@ import Footer from "../components/footer.astro";
 	body {
 		background-color: var(--background-colour);
 		background-image: url(/nnnoise.svg);
+		background-attachment: fixed;
 		background-repeat: repeat;
 		margin: 0;
 		color: var(--text-colour);
@@ -58,10 +71,10 @@ import Footer from "../components/footer.astro";
 	@media (min-width: 1001px) { /* opposite of max-width: 1000px */
 		.details {
 			position: absolute;
-			top: 0;
+			top: 30%;
 			left: 50%;
 			transform: translate(-50%, 0); /* centre the element */
-			z-index: 9999;
+			z-index: 500;
 		}
 	}
 

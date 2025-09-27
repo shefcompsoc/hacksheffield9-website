@@ -1,0 +1,111 @@
+---
+import FrasersGroupLogo from "../img/Logo_Frasers_Group.svg";
+import GrafanaLogo from "../img/Grafana_logo.svg";
+import { Image } from "astro:assets";
+import HexContainer from "../components/hex-container.astro";
+---
+
+<h1>Sponsors</h1>
+<h2 class="silver_sponsors_header">Silver Sponsors</h2>
+<HexContainer
+	width="30rem"
+	hexHeight="15rem"
+	margin="1rem"
+	extraStyles="margin-bottom: 6rem; margin-left: auto; margin-right: auto;"
+>
+	<div>
+		<Image
+			src={GrafanaLogo}
+			alt="Grafana Logo"
+			style="width: 70%; height: auto; margin-top: -1rem;"
+		/>
+	</div>
+	<div>
+		<Image
+			src={FrasersGroupLogo}
+			alt="Frasers Group Logo"
+			style="width: 80%; height: auto; margin-top: 0rem;"
+		/>
+	</div>
+</HexContainer>
+
+<style>
+	body {
+		background-color: var(--background-colour);
+		background-image: url(/nnnoise.svg);
+		background-repeat: repeat;
+		margin: 0;
+		color: var(--text-colour);
+		font-family: "Quantico", Arial, Helvetica, sans-serif;
+	}
+
+	main {
+		width: 100%;
+		height: fit-content;
+		min-height: 100vh;
+	}
+
+	.details {
+		width: 85%;
+		padding: 8rem 7.5%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+
+	h1 {
+		text-align: center;
+		margin-top: 1rem;
+		font-size: 5rem;
+		color: var(--primary-colour);
+	}
+
+	.silver_sponsors_header {
+		text-align: center;
+		margin-top: 1rem;
+		font-size: 3rem;
+		color: Silver;
+	}
+
+	.silver-sponsors {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 3rem;
+		padding: 1rem;
+		border-radius: 1rem;
+		margin: 2rem auto;
+		width: fit-content;
+	}
+
+
+	@media (min-width: 1001px) {
+		/* opposite of max-width: 1000px */
+		.details {
+			position: absolute;
+			top: 30%;
+			left: 50%;
+			transform: translate(-50%, 0); /* centre the element */
+			z-index: 500;
+		}
+	}
+
+	@media (max-width: 1000px) {
+		.details {
+			flex-direction: column;
+			justify-content: baseline;
+			align-items: center;
+		}
+	}
+
+	@media (max-width: 1300px) {
+		.details {
+			width: 94%;
+			padding: 3rem 3%;
+			gap: 5rem;
+		}
+	}
+</style>

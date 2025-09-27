@@ -1,0 +1,47 @@
+@import url("root.css");
+
+#faqs-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+#faqs {
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.faq-item {
+    width: calc(100% - 3.4rem);
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: purple;
+    border: 0.25rem solid var(--secondary-colour);
+    border-color: var(--primary-colour);
+    border-radius: 1rem;
+}
+
+#faqs summary {
+    margin-bottom: 0.25rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+    list-style: none;
+    cursor: pointer;
+}
+
+#faqs summary:hover {
+    text-decoration: underline;
+}
+
+#faqs details>p {
+    color: white;
+}
