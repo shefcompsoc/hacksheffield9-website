@@ -1,0 +1,72 @@
+@import url("root.css");
+
+/* based on https://css-tricks.com/hexagons-and-beyond-flexible-responsive-grid-patterns-sans-media-queries/ */
+
+/* NOTE: if the overlap breaks try adding a `margin-bottom: var(--overlap);` style to the elements inside the hexagon */
+
+.sponsor-hex-container {
+    /* https://math.stackexchange.com/questions/796081/width-to-height-formula-for-hexagon */
+    --hex-width: calc(var(--hex-height) * 0.8660254);
+    --overlap:calc(var(--margin) - (var(--hex-height)*0.25));
+    display: flex;
+}
+
+.sponsor-hex-grid {
+    font-size: 0;
+}
+
+.sponsor-hex-grid::before {
+    content: "";
+    width: calc(var(--hex-width)/2 + var(--margin));
+    float: left;
+    height: 100%;
+
+    /* shape-outside gradient applies the nudge to every 2 rows */
+    /* height of 2 rows = 2*hex height + 4*margin - 2*overlap
+                        = 2h + 4m - 2(0.25m) = 1.5h + 4m */
+    --x: calc(1.5*var(--hex-height) + 3*var(--margin));
+    shape-outside: repeating-linear-gradient(
+        #0000 0 calc(var(--x) - 3px), /* transparent so row is not nudged */
+            /* slight offset to account for being between and affecting both rows */
+        #000 0 var(--x) /* not transparent, so row is nudged */
+    );
+}
+
+.sponsor-hex-grid div {
+    height: var(--hex-height);
+    width: var(--hex-width);
+    background-color: white;
+    margin: var(--margin);
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    display: inline-block;
+
+    /* Negative margin for overlap */
+    margin-bottom: var(--overlap);
+
+    -webkit-align-content: center;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Quantico-Bold", Arial;
+    color: var(--text-colour);
+    font-size: 1.5rem;
+}
+
+/* CSS from the placeholder Team grid */
+/* .hex-grid div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hex-grid div:hover img {
+    transform: scale(1.1);
+} */
+
+@media (max-width: 600px) {
+    .sponsor-hexagon {
+        width: 150px;
+        height: 86.6px;
+    }
+}

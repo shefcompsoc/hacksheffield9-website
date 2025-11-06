@@ -1,0 +1,27 @@
+---
+import "../styles/sponsor-hex-container.css"
+
+interface Props {
+    hexHeight: string,
+    margin: string,
+    width: string,
+    height?: string,
+    extraStyles?: string,
+};
+
+const {
+    hexHeight,
+    margin,
+    width,
+    height = "fit-content",
+    extraStyles = "",
+} = Astro.props;
+---
+<div
+    class="sponsor-hex-container"
+    style={`height: ${height}; width: ${width}; --hex-height: ${hexHeight}; --margin: ${margin}; ${extraStyles}`}
+>
+    <div class="sponsor-hex-grid">
+        <slot />
+    </div>
+</div>

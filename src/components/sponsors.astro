@@ -3,49 +3,57 @@ import FrasersGroupLogo from "../img/Logo_Frasers_Group.svg";
 import GrafanaLogo from "../img/Grafana_logo.svg";
 import ReplyLogo from "../img/Reply_logo.svg"
 import { Image } from "astro:assets";
-import HexContainer from "../components/hex-container.astro";
+import SponsorHexContainer from "../components/sponsor-hex-container.astro";
 ---
 
 <h1>Sponsors</h1>
 <h2 class="gold_sponsors_header">Gold Sponsors</h2>
-<HexContainer
-	width="15rem"
+<SponsorHexContainer
+	width="17rem"
 	hexHeight="15rem"
 	margin="1rem"
 	extraStyles="margin-bottom: 6rem; margin-left: auto; margin-right: auto;"
 >
-	<div>
-		<Image
+	<div class="sponsor-hex-grid" style="background-color: var(--primary-colour); height: calc(15rem * 1.15); width: calc(15rem);" >
+		<div>
+			<Image
 			src={ReplyLogo}
 			alt="Reply Logo"
 			style="width: 90%; height: auto; margin-top: 0.5rem;"
-		/>
+			/>
+		</div>
 	</div>
 
-</HexContainer>
+</SponsorHexContainer>
 
 <h2 class="silver_sponsors_header">Silver Sponsors</h2>
-<HexContainer
-	width="30rem"
+<SponsorHexContainer
+	width="34rem"
 	hexHeight="15rem"
 	margin="1rem"
 	extraStyles="margin-bottom: 6rem; margin-left: auto; margin-right: auto;"
 >
-	<div>
-		<Image
+	<div class="sponsor-hex-grid" style="background-color: var(--primary-colour); height: calc(15rem * 1.15); width: calc(15rem);" >
+		<div>
+			<Image
 			src={GrafanaLogo}
 			alt="Grafana Logo"
 			style="width: 70%; height: auto; margin-top: -1rem;"
-		/>
+			/>
+		</div>
 	</div>
-	<div>
-		<Image
-			src={FrasersGroupLogo}
-			alt="Frasers Group Logo"
-			style="width: 80%; height: auto; margin-top: 0.4rem;"
-		/>
+
+	<div class="sponsor-hex-grid" style="background-color: var(--primary-colour); height: calc(15rem * 1.15); width: calc(15rem);" >
+		<div>
+			<Image
+				src={FrasersGroupLogo}
+				alt="Frasers Group Logo"
+				style="width: 80%; height: auto; margin-top: 0.4rem;"
+			/>
+		</div>
 	</div>
-</HexContainer>
+	
+</SponsorHexContainer>
 
 <style>
 	body {
