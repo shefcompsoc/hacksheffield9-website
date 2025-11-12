@@ -7,20 +7,24 @@
 
 #schedule table {
     width: 100%;
-    max-width: 800px;;
+    max-width: 1000px;
 }
 
 #schedule td:first-child {
+    display: flex;
     width: 5ch;
     font-size: 3rem;
     text-align: left;
     padding-right: 1rem;
 }
+
 #schedule td:last-child {
     font-size: 1.5rem;
 }
 
 #schedule tr {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 0.15rem solid #777777;
 }
