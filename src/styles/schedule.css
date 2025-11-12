@@ -1,0 +1,23 @@
+#schedule {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#schedule table {
+    width: 100%;
+    max-width: 800px;;
+}
+
+#schedule td:first-child {
+    width: 5ch;
+    font-size: 3rem;
+    text-align: right;
+    padding-right: 1rem;
+}
+
+#schedule tr {
+    display: block;
+    border-bottom: 0.15rem solid #777777;
+}
