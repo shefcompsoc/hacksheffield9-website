@@ -2,6 +2,7 @@
 import FrasersGroupLogo from "../img/Logo_Frasers_Group.svg";
 import GrafanaLogo from "../img/Grafana_logo.svg";
 import ReplyLogo from "../img/Reply_logo.svg"
+import TPPLogo from "../img/tpp.png"
 import { Image } from "astro:assets";
 import SponsorHexContainer from "../components/sponsor-hex-container.astro";
 
@@ -59,6 +60,25 @@ import ShefESH from "../img/sheftech/ShefESH.svg"
 	
 </SponsorHexContainer>
 
+<h2 class="silver_sponsors_header">Prizes Given By</h2>
+<SponsorHexContainer
+	width="15rem"
+	hexHeight="15rem"
+	margin="0.5rem"
+	extraStyles="margin-bottom: 6rem; margin-left: auto; margin-right: auto;"
+>
+	<div class="sponsor-hex-grid" style="background-color: var(--primary-colour);" >
+		<div style="width: 90%; height: 90%; margin-top: 0.7rem;">
+			<Image
+			src={TPPLogo}
+			alt="TPP Logo"
+			style="width: 70%; height: auto; margin-top: 0rem; margin-left: 0.5rem;"
+			/>
+		</div>
+	</div>
+
+	
+</SponsorHexContainer>
 
 <h2 style="text-align: center; margin-top: 1rem; font-size: 3rem;">Partners</h2>
 <SponsorHexContainer
