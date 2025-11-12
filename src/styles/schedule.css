@@ -13,8 +13,11 @@
 #schedule td:first-child {
     width: 5ch;
     font-size: 3rem;
-    text-align: right;
+    text-align: left;
     padding-right: 1rem;
+}
+#schedule td:last-child {
+    font-size: 1.5rem;
 }
 
 #schedule tr {
