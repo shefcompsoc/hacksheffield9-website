@@ -5,9 +5,18 @@
     align-items: center;
 }
 
+#schedule > h3 {
+    margin-bottom: 1rem;
+}
+
 #schedule table {
     width: 100%;
     max-width: 1000px;
+    background-color: purple;
+    border: 0.25rem solid var(--secondary-colour);
+    border-color: var(--primary-colour);
+    border-radius: 1rem;
+    padding: 15px;
 }
 
 #schedule td:first-child {
