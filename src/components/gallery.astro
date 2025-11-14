@@ -16,6 +16,13 @@ const imageFiles = await Astro.glob("../img/gallery/*");
 				/>
 			))
 		}
+		<style>
+			@media (max-width: 768px) {
+				.details img  {
+					width: 20rem !important;
+				}
+			}
+		</style>
 	</div>
 </div>
 
