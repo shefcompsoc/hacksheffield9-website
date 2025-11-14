@@ -52,6 +52,11 @@
     font-size: 1.5rem;
 }
 
+.sponsor-hex-container {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
 /* CSS from the placeholder Team grid */
 /* .hex-grid div img {
     width: 100%;
@@ -77,6 +82,7 @@
     .sponsor-hex-container {
         width: 15rem !important;
         display: block;
+        margin-bottom: 1rem;
     }
 
     .sponsor-hex-container > div:first-child {
