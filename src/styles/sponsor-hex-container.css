@@ -64,9 +64,38 @@
     transform: scale(1.1);
 } */
 
-@media (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .sponsor-hexagon {
-        width: 150px;
-        height: 86.6px;
+        width: 100px;
+        height: 57.7px;
+    }
+
+    .sponsor-hex-grid::before {
+        display: none;
+    }
+    
+    .sponsor-hex-container {
+        width: 15rem !important;
+        display: block;
+    }
+
+    .sponsor-hex-container > div:first-child {
+        justify-content: center;
+    }
+
+
+    .sponsor-hex-grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sponsor-hex-grid div {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-right: auto;
+        margin-left: auto;
+
     }
 }
