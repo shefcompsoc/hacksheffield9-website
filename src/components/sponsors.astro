@@ -9,6 +9,10 @@ import SponsorHexContainer from "../components/sponsor-hex-container.astro";
 import MLHLogo from "../img/mlh-logo-color.svg"
 import HUKLogo from "../img/HUK.svg"
 
+import ShefTech from "../img/sheftech/ShefTech.png"
+import TechVision from "../img/sheftech/TechVision.png"
+import SWICS from "../img/sheftech/swics-logo.webp"
+import DataSoc from "../img/sheftech/DataSoc.png"
 import ShefESH from "../img/sheftech/ShefESH.svg"
 import CompSoc from "../img/sheftech/CompSoc.svg"
 import GameDev from "../img/sheftech/GameDev.png"
@@ -20,10 +24,10 @@ import GameDev from "../img/sheftech/GameDev.png"
 	width="18rem"
 	hexHeight="18rem"
 	margin="0.5rem"
-	extraStyles="margin-left: auto; margin-right: auto;"
+	extraStyles="margin-left: auto; margin-right: auto; margin-bottom:8%;"
 >
 	<div class="sponsor-hex-grid" style="background-color: var(--primary-colour);" >
-		<div style="width: 90%; height: 90%; margin-top: 0.7rem;">
+		<div style="width: 90%; height: 90%; margin-top: 0.85rem;">
 			<Image
 			src={ReplyLogo}
 			alt="Reply Logo"
@@ -39,7 +43,7 @@ import GameDev from "../img/sheftech/GameDev.png"
 	width="30rem"
 	hexHeight="15rem"
 	margin="0.5rem"
-	extraStyles="margin-left: auto; margin-right: auto;"
+	extraStyles="margin-left: auto; margin-right: auto;  margin-bottom:8%;"
 >
 	<div class="sponsor-hex-grid" style="background-color: var(--primary-colour);" >
 		<div style="width: 90%; height: 90%; margin-top: 0.7rem;">
@@ -68,7 +72,7 @@ import GameDev from "../img/sheftech/GameDev.png"
 	width="15rem"
 	hexHeight="15rem"
 	margin="0.5rem"
-	extraStyles="margin-left: auto; margin-right: auto;"
+	extraStyles="margin-left: auto; margin-right: auto;  margin-bottom:8%;"
 >
 	<div class="sponsor-hex-grid" style="background-color: var(--primary-colour);" >
 		<div style="width: 90%; height: 90%; margin-top: 0.7rem;">
@@ -88,7 +92,7 @@ import GameDev from "../img/sheftech/GameDev.png"
 	width="30rem"
 	hexHeight="15rem"
 	margin="0.5rem"
-	extraStyles="margin-left: auto; margin-right: auto;"
+	extraStyles="margin-left: auto; margin-right: auto;  margin-bottom:8%;"
 >
 	<div class="sponsor-hex-grid" style="background-color: var(--primary-colour);" >
 		<div style="width: 90%; height: 90%; margin-top: 0.7rem;">
@@ -114,8 +118,29 @@ import GameDev from "../img/sheftech/GameDev.png"
 	width="30rem"
 	hexHeight="15rem"
 	margin="0.5rem"
-	extraStyles="margin-left: auto; margin-right: auto;"
+	extraStyles="margin-left: auto; margin-right: auto; margin-bottom:8%;"
 >
+	<div class="sponsor-hex-grid" style="background-color: var(--primary-colour);" >
+		<div style="width: 90%; height: 90%; margin-top: 0.7rem;">
+			<Image
+			src={ShefTech}
+			alt="Sheffield Tech Societies Logo"
+			style="width: 100%; height: auto; margin-top: 0.5rem;"
+			/>
+		</div>
+	</div>
+
+	
+	<div class="sponsor-hex-grid" style="background-color: var(--primary-colour);" >
+		<div style="width: 90%; height: 90%; margin-top: 0.7rem;">
+			<Image
+			src={CompSoc}
+			alt="CompSoc Logo"
+			style="width: 100%; height: auto; margin-top: 0.5rem;"
+			/>
+		</div>
+	</div>
+	
 	<div class="sponsor-hex-grid" style="background-color: var(--primary-colour);" >
 		<div style="width: 90%; height: 90%; margin-top: 0.7rem;">
 			<Image
@@ -125,13 +150,13 @@ import GameDev from "../img/sheftech/GameDev.png"
 			/>
 		</div>
 	</div>
-	
+
 	<div class="sponsor-hex-grid" style="background-color: var(--primary-colour);" >
 		<div style="width: 90%; height: 90%; margin-top: 0.7rem;">
 			<Image
-			src={CompSoc}
-			alt="CompSoc Logo"
-			style="width: 100%; height: auto; margin-top: 0.5rem;"
+			src={SWICS}
+			alt="SWICS Logo"
+			style="width: 80%; height: auto; margin-top: 0.5rem;"
 			/>
 		</div>
 	</div>
@@ -145,6 +170,28 @@ import GameDev from "../img/sheftech/GameDev.png"
 			/>
 		</div>
 	</div>
+	
+	<div class="sponsor-hex-grid" style="background-color: var(--primary-colour);" >
+		<div style="width: 90%; height: 90%; margin-top: 0.7rem;">
+			<Image
+			src={DataSoc}
+			alt="DataSoc Logo"
+			style="width: 90%; height: auto; margin-top: -0.2rem;"
+			/>
+		</div>
+	</div>
+
+	<div class="sponsor-hex-grid" style="background-color: var(--primary-colour);" >
+		<div style="width: 90%; height: 90%; margin-top: 0.7rem;">
+			<Image
+			src={TechVision}
+			alt="TechVision Logo"
+			style="width: 100%; height: auto; margin-top: 0.5rem;"
+			/>
+		</div>
+	</div>
+
+	<p class="hide-on-mobile" style="background-color: transparent; margin-bottom: 12rem;"></p>
 </SponsorHexContainer>
 
 <style>
