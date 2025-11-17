@@ -24,13 +24,15 @@
 #schedule td:first-child {
     display: flex;
     width: 5ch;
-    font-size: 3rem;
+    font-size: 250%;
     text-align: left;
     padding-right: 1rem;
 }
 
 #schedule td:last-child {
     font-size: 1.5rem;
+    text-align: right;
+    padding-left: 20%;
 }
 
 #schedule tr {
