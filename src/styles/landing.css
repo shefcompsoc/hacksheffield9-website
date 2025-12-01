@@ -61,6 +61,10 @@ h3 {
     padding: 1rem 1rem;
 }
 
+#register-interest > p {
+    font-size: xx-large;
+}
+
 @media (max-width: 1300px) {
     h2 {
         font-size: 3rem;
