@@ -38,6 +38,7 @@ import HexContainer from "./hex-container.astro";
     function updateCountdown() {
         const now = new Date().getTime();
         let timeRemaining = targetDate - now;
+        if (timeRemaining < 0) { return; }
 
         const daysElem = document.getElementById("days");
         const hoursElem = document.getElementById("hours");
